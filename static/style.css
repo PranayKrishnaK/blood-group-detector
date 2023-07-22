@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  body{
+    background:url('static/image/port5.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+
+  }
+h1{
+    text-align: center;
+    color: brown;
+    min-height:50px;
+    background-color:black;
+    background-attachment: fixed;
+    padding: 20px;
+    margin: 20px;
+}
+.container{
+  text-align: center;
+  padding: 250px;
+  margin: 20px;
+}

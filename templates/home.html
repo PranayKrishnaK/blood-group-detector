@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website For Blood Group Detection</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <h1>BLOOD GROUP DETECTION BASED ON FINGER PRINTS</h1>
+    <div class="cont">
+    <div class="container">
+      <form method="post" enctype="multipart/form-data">
+        <label for="myfile"> Select a FingerPrint image:</label>
+        <input type="file" required id="myfile" name="myFile">
+
+        <br /><br />
+        <div class="card">
+          {% if blood_group %}
+            <h1> Result group : {{ blood_group }} </h1>
+            <h2> Total length : {{ total_length }} </h2>
+          {% endif %}
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
