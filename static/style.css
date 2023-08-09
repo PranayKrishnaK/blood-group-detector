@@ -16,14 +16,33 @@
 h1{
     text-align: center;
     color: brown;
-    min-height:50px;
+    min-height:40px;
     background-color:black;
     background-attachment: fixed;
-    padding: 20px;
-    margin: 20px;
+    padding-left:60px;
+    padding-top:24px;
+    margin-left:120px;
 }
 .container{
-  text-align: center;
-  padding: 250px;
-  margin: 20px;
+ text-align:center;
+  padding: 200px;
+  margin: 40px;
+   /*margin-right:20px;*/
+   /*padding-right:0.5px;*/
+   margin-bottom:30px;
+   box-shadow: 3px 0px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+   transition:0.3s ease;
+   position: absolute;
+  min-width: 109%;
+  box-sizing: border-box;
+  min-block-size:5px;
+}
+h2{
+   color:rgb(237, 14, 14);
+   background-color: black;
+   background-attachment: fixed;
+   margin: 20px; /* Adjust this value to decrease the background margin */
+   padding: 20px;
+   min-height:10px
+   
 }
