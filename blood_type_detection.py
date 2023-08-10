@@ -30,12 +30,18 @@ def calculate_distance(point1, point2):
     return np.sqrt((point2['x'] - point1['x'])**2 + (point2['y'] - point1['y'])**2)
 
 def predict_blood_group(minutiae):
-    ward=len(minutiae)*100/700
-
-    if ward<=25.6:
-        blood_group = 'O'
-    elif ward<=27 and ward>30:
-        blood_group = 'A'
+    # Placeholder code for demonstration purposes
+    # Assign a random blood group based on the number of detected minutiae
+    if len(minutiae)<100:
+        blood_group = 'O+'
+    elif  len(minutiae)>=100 and len(minutiae)<=150:
+        blood_group = 'A+'
+    elif  len(minutiae)>150 and len(minutiae)<=170:
+        blood_group = 'AB+'
+    elif  len(minutiae)>170 and len(minutiae)<=225:
+        blood_group = 'B+'
+    elif  len(minutiae)>225 and len(minutiae)<=250:
+        blood_group = 'A+'
     else:
         blood_group = 'B'
 
@@ -56,14 +62,14 @@ def predict(fingerprint_image_path):
     total_length = 0
     for i in range(len(minutiae) - 1):
         total_length += calculate_distance(minutiae[i], minutiae[i + 1])
-    
 
-    ward=total_length*100/700
     # Predict the blood group based on the extracted minutiae
     blood_group = predict_blood_group(minutiae)
 
     # Display the predicted blood group and total length between minutiae
     return blood_group, total_length
+    print("Predicted Blood Group:", blood_group)
+    print("Total Length between Minutiae (in pixels):", total_length)
 
 if __name__ == '__main__':
     predict()
